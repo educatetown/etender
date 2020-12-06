@@ -1,0 +1,1 @@
+from tender.wsgi import application

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<hr>
+<!--Proposal Section -->
+<section id="proposal">
+    <div class="row">
+        {% for b in auction %}
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+                {% if b.picture %}
+                    <a href="{% url 'intent2awards:single' b.slug %}">
+                        <img src="{{b.picture.url}}" class="card-img-top" alt="...">
+                    </a>
+                 {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ b.title }}</h5>
+                    <p class="card-text">{{ b.tender_description|truncatewords:10 }}</p>
+                    <a href="{% url 'intent2awards:single' b.slug %}" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        {% cycle "" "" "</div><hr/><div class='row'>" %}
+        {% endfor %}
+    </div>
+</section>
+<!--News ends-->
+
+<hr>
+{% endblock %}

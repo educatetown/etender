@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    searching for {{ query }}
+      <div class="row">
+                {% for t in tender %}
+                <div class="col-sm-4">
+                    <div class="card-deck">
+                        <div class="card">
+                            {% if t.picture %}
+                            <a href="{% url 'tender:single' t.slug %}">
+                                <img src="{{b.picture.url}}" class="card-img-top" alt="...">
+                            </a>
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{t.title}}</h5>
+                                <p class="card-text"><i class="fas fa-map-marker"></i>{{t.org_name}}</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Published Date: {{t.published_date}}</li>
+                                <li class="list-group-item">Last Date: {{t.last_date}}</li>
+                            </ul>
+                            <a href="{% url 'tender:single' t.slug %}" class="btn btn-primary">Visit Tender/Notice</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+
+  <div class="row">
+                {% for t in auction %}
+                <div class="col-sm-4">
+                    <div class="card-deck">
+                        <div class="card">
+                            {% if t.picture %}
+                            <a href="{% url 'auction:single' t.slug %}">
+                                <img src="{{b.picture.url}}" class="card-img-top" alt="...">
+                            </a>
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{t.title}}</h5>
+                                <p class="card-text"><i class="fas fa-map-marker"></i>{{t.org_name}}</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Published Date: {{t.published_date}}</li>
+                                <li class="list-group-item">Last Date: {{t.last_date}}</li>
+                            </ul>
+                            <a href="{% url 'auction:single' t.slug %}" class="btn btn-primary">Visit Tender/Notice</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+  <div class="row">
+                {% for t in eoi %}
+                <div class="col-sm-4">
+                    <div class="card-deck">
+                        <div class="card">
+                            {% if t.picture %}
+                            <a href="{% url 'eoi:single' t.slug %}">
+                                <img src="{{b.picture.url}}" class="card-img-top" alt="...">
+                            </a>
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{t.title}}</h5>
+                                <p class="card-text"><i class="fas fa-map-marker"></i>{{t.org_name}}</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Published Date: {{t.published_date}}</li>
+                                <li class="list-group-item">Last Date: {{t.last_date}}</li>
+                            </ul>
+                            <a href="{% url 'eoi:single' t.slug %}" class="btn btn-primary">Visit Tender/Notice</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+  <div class="row">
+                {% for t in intent2awards %}
+                <div class="col-sm-4">
+                    <div class="card-deck">
+                        <div class="card">
+                            {% if t.picture %}
+                            <a href="{% url 'intent2awards:single' t.slug %}">
+                                <img src="{{b.picture.url}}" class="card-img-top" alt="...">
+                            </a>
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{t.title}}</h5>
+                                <p class="card-text"><i class="fas fa-map-marker"></i>{{t.org_name}}</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Published Date: {{t.published_date}}</li>
+                                <li class="list-group-item">Last Date: {{t.last_date}}</li>
+                            </ul>
+                            <a href="{% url 'intent2awards:single' t.slug %}" class="btn btn-primary">Visit Tender/Notice</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+  <div class="row">
+                {% for t in others %}
+                <div class="col-sm-4">
+                    <div class="card-deck">
+                        <div class="card">
+                            {% if t.picture %}
+                            <a href="{% url 'others:single' t.slug %}">
+                                <img src="{{b.picture.url}}" class="card-img-top" alt="...">
+                            </a>
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{t.title}}</h5>
+                                <p class="card-text"><i class="fas fa-map-marker"></i>{{t.org_name}}</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Published Date: {{t.published_date}}</li>
+                                <li class="list-group-item">Last Date: {{t.last_date}}</li>
+                            </ul>
+                            <a href="{% url 'others:single' t.slug %}" class="btn btn-primary">Visit Tender/Notice</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+  <div class="row">
+                {% for t in proposal %}
+                <div class="col-sm-4">
+                    <div class="card-deck">
+                        <div class="card">
+                            {% if t.picture %}
+                            <a href="{% url 'proposal:single' t.slug %}">
+                                <img src="{{b.picture.url}}" class="card-img-top" alt="...">
+                            </a>
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{t.title}}</h5>
+                                <p class="card-text"><i class="fas fa-map-marker"></i>{{t.org_name}}</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Published Date: {{t.published_date}}</li>
+                                <li class="list-group-item">Last Date: {{t.last_date}}</li>
+                            </ul>
+                            <a href="{% url 'proposal:single' t.slug %}" class="btn btn-primary">Visit Tender/Notice</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+  <div class="row">
+                {% for t in quotation %}
+                <div class="col-sm-4">
+                    <div class="card-deck">
+                        <div class="card">
+                            {% if t.picture %}
+                            <a href="{% url 'quotation:single' t.slug %}">
+                                <img src="{{b.picture.url}}" class="card-img-top" alt="...">
+                            </a>
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{t.title}}</h5>
+                                <p class="card-text"><i class="fas fa-map-marker"></i>{{t.org_name}}</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Published Date: {{t.published_date}}</li>
+                                <li class="list-group-item">Last Date: {{t.last_date}}</li>
+                            </ul>
+                            <a href="{% url 'quotation:single' t.slug %}" class="btn btn-primary">Visit Tender/Notice</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+  <div class="row">
+                {% for t in standinglist %}
+                <div class="col-sm-4">
+                    <div class="card-deck">
+                        <div class="card">
+                            {% if t.picture %}
+                            <a href="{% url 'standinglist:single' t.slug %}">
+                                <img src="{{b.picture.url}}" class="card-img-top" alt="...">
+                            </a>
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{t.title}}</h5>
+                                <p class="card-text"><i class="fas fa-map-marker"></i>{{t.org_name}}</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Published Date: {{t.published_date}}</li>
+                                <li class="list-group-item">Last Date: {{t.last_date}}</li>
+                            </ul>
+                            <a href="{% url 'standinglist:single' t.slug %}" class="btn btn-primary">Visit Tender/Notice</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+
+
+{% endblock %}

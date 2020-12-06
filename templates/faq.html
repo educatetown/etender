@@ -1,0 +1,249 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!--FAQ-->
+<section id="faq">
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        1.How often are tenders updated?
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    All tenders are appended and updated daily.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        2. Can I bookmark tenders that is in my interest ?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    Yes, you can bookmark interested Tender to participate. When you bookmark any such tenders, you will
+                    get alert as the submission date approaches.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        3. What is tender notice tagging ?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    Many similar notices can be tagged by any name and they are listed under the tagged name. This helps
+                    users to categorize similar type of notices in one place for easy viewing. For e.g. if you want to
+                    categorize all tenders related to Hospital, Schools, Colleges etc, you can tag it with that name.
+                    This will help you to list tender and notices according to tagged name. For e.g you can retrieve all
+                    with tag name “Hospital” or “School” or “Colleges” etc.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        4. Can I filter notices according to categories etc ?
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body">
+                    You can view notices filtering Notice Category, Newspaper Name, Notice Issuing Company, Type of
+                    Notice and retrieve records in a range of date.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFive">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        5. Do I need to regularly visit the website to find new notices daily ?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                <div class="card-body">
+                    Not necessarily. You can click on Subscribe to Daily Mail in Profile Menu and you will receive email
+                    notification right in your inbox on daily basis without even going to the website.
+
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingSix">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        6. How long can I use the trial version?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                <div class="card-body">
+                    As a registered member, you are allowed to use full trial version for 15 days from today as a trial
+                    basis.
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header" id="headingSeven">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        7. Can I share tender notices on social sites ?
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                <div class="card-body">
+                    Of course. You can share notice in any social sites.
+
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingEight">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        8. Can I download notices ?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                <div class="card-body">
+                    Yes. You can download tender notices.
+
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingNine">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                        9. I'd like to sign up but none of the plans suits my needs.
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+                <div class="card-body">
+                    We are offering Custom Plans to long-term subscribers; just contact us directly at my email..
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header" id="headingTen">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+                        10. Which newspapers are included in the website ?
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
+                <div class="card-body">
+                    Newspapers includes all daily Nepali and English newspapers. Please check Setting menu and see all
+                    included newspaper.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingEleven">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                        11. Do I have to register to use this service ?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionExample">
+                <div class="card-body">
+                    Yes. You need to be a registered member to use this app and it is very simple. Simply click New User
+                    button in the website and enter your Email Address and Password. That’s it.. !
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwelve">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTweleve">
+                        12. Can I pay online ?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordionExample">
+                <div class="card-body">
+                    Yes. If you have e-banking facility with your bank, you can simply pay online. Also there are many
+                    other payment methods. E.g. Cash Payment, Bank Deposit, Cheque Deposit etc.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingThirteen">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseThirteen" aria-expanded="true" aria-controls="collapseThirteen">
+                        13. Can I cancel my subscription?
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordionExample">
+                <div class="card-body">
+                    Yes,you can cancel your subscription at any time.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="heading14">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                        14. Can I get a discount?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapse14" class="collapse" aria-labelledby="heading14" data-parent="#accordionExample">
+                <div class="card-body">
+                    Yes, there are many discount and gift offer. Please check Pricing Page and you will see discount and
+                    gift offer provided.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--FAQ ends -->
+
+{% endblock %}

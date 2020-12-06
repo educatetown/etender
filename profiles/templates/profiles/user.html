@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title_content %} {{user}} || {{block.super}} {% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <div class="col-md-12" align="center">
+        {% if user.profile.profile_pic  %}
+            <img class="profile_img" src="{{ user.profile.profile_pic.url }}" class="img-responsive" width="150" height="150">
+        {% endif %}
+        <h5>{{user}}</h5>
+        <h5>{{user.email}}</h5>
+    </div>
+
+<br><br>
+    {{pk}}
+    {% if user.first_name %}
+        <h1> Name :     {{user.first_name}} {{user.last_name}}</h1>
+    {% else %}
+        <h1> Name :     {{user}} </h1>
+    {% endif %}
+
+    <div class="col-md-12">
+        <h5></h5>
+        <h6>Location :                {{user.profile.location}}</h6>
+        <h6>mobile_number :                {{user.profile.mobile_number}}</h6>
+        <p>Account created at: {{user.profile.created_at}}</p>
+        {% if user.is_authenticated %}
+            {% if request.user %}
+                {% if request.user == user %}
+                     <p><a href="{% url 'profiles:update' pk=user.profile.pk %}" class="btn btn-warning btn-lg">Update</a></p>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+
+    </div>
+
+
+
+</div>
+
+
+{% endblock %}

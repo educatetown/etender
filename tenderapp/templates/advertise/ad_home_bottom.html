@@ -1,0 +1,29 @@
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            {% for ad in advertise|slice:":2" %}
+                {% if ad.active %}
+                    {% if ad.choose_place == 'HomeBottom' %}
+                        {% if ad.page_size == 'Full' %}
+                           <a href="{{ad.link}}"> <video width="100%" height="200px" playsinline autoplay muted loop>
+                              <source src="{{ad.video_file.url}}" type="video/mp4">
+                              Your browser does not support HTML5 video.
+                           </video></a>
+                        {% elif ad.page_size == 'Quarter' %}
+                        <a href="{{ad.link}}">    <video width="75%%" height="150px" playsinline autoplay muted loop>
+                              <source src="{{ad.video_file.url}}" type="video/mp4">
+                              Your browser does not support HTML5 video.
+                        </video></a>
+                        {% else %}
+                           <a href="{{ad.link}}"> <video width="50%" height="80px" playsinline autoplay muted loop>
+                              <source src="{{ad.video_file.url}}" type="video/mp4">
+                              Your browser does not support HTML5 video.
+                           </video></a>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

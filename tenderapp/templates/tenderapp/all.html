@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'advertise/ad_home_top.html' %}
+{% if user.username %}
+<h5 align="right">Welcome Back :<b> <a href="/u/{{user.username}}">{{user|title}}</a></b> </h5>
+{% endif %}
+<div class="container">
+<section id="home_">
+{% include 'tenderapp/snippets/slideshow.html' %}
+
+
+   
+    
+   </section>
+
+{% include 'tenderapp/snippets/tender.html' %}
+{% include 'tenderapp/snippets/quotation.html' %}
+{% include 'tenderapp/snippets/auction.html' %}
+{% include 'tenderapp/snippets/proposal.html' %}
+{% include 'tenderapp/snippets/eoi.html' %}
+{% include 'tenderapp/snippets/standinglist.html' %}
+{% include 'tenderapp/snippets/intent2awards.html' %}
+</div>
+{% include 'snippets/footer_stack.html' %}
+
+{% include 'advertise/ad_home_bottom.html' %}
+
+{% endblock %}

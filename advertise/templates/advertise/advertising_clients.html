@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+
+
+<!-- Contact -->
+    <section id="advertise_contact">
+        <div class="content-box-md">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div id="contact-left">
+                            <div class="vertical-heading">
+                                <h5>Who We Are</h5>
+                                <h2>Get<br> In <strong> Touch</strong></h2>
+                            </div>
+                            <p>Feel free to contact with us.</p>
+                            <div id="offices">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="office">
+                                            <h4>Nepalgunj</h4>
+                                             <ul class="office-details">
+                                            <li><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <span>Dipen Chaudhary</span>
+                                            </li>
+                                            <li><i class="fa fa-mobile"></i> <span>+(977) 9848354622</span></li>
+                                            <li><i class="fa fa-envelope"></i><span> info@etendernepal.com</span>
+                                            </li>
+
+                                            <li><i class="fa fa-map-marker"></i><span> Karkandhoo Chowk, <br>
+                                                        Nepalgunj, Nepal</span></li>
+
+                                        </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul class="social-list">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-right">
+                           <form method="POST">
+        {% bootstrap_form form %}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-general btn-yellow" value="Submit">
+    </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Ends-->
+
+
+
+
+
+
+<br>
+
+{% endblock %}

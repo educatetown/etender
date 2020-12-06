@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    {% include 'snippets/meta.html' %}
+
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}"/>
+    <title>{% block title_content %} Dipen Tender {% endblock %}</title>
+
+    {% include 'snippets/css.html' %}
+</head>
+
+<body>
+    {% include 'snippets/nav.html' %}
+
+    
+
+        {% block content %}
+
+        {% endblock %}
+
+    
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+    {% include 'snippets/footer.html' %}
+    {% include 'snippets/js.html' %}
+</body>
+
+</html>

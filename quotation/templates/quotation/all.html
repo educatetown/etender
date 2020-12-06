@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<hr>
+<!--Proposal Section -->
+<section id="quotation">
+    {% if user.is_authenticated%}
+
+    <div class="row">
+        {% for b in auction %}
+        <div class="col-sm-4">
+            <div class="card" style="width: 18rem;">
+                {% if b.picture %}
+                    <a href="{% url 'quotation:single' b.slug %}">
+                        <img src="{{b.picture.url}}" class="card-img-top" alt="...">
+                    </a>
+                 {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ b.title }}</h5>
+                    <p class="card-text">{{ b.tender_description|truncatewords:10 }}</p>
+                    <a href="{% url 'quotation:single' b.slug %}" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        {% cycle "" "" "</div><hr/><div class='row'>" %}
+        {% endfor %}
+    </div>
+
+{% else %}
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Login Required!</h4>
+        <p>Please signup to view this document. to register, click the login button from the above and click the option register here.</p>
+        <hr>
+        <p class="mb-0">See you soon!</p>
+    </div>
+    {% endif %}
+</section>
+<!--News ends-->
+
+<hr>
+{% endblock %}
